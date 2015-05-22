@@ -11,12 +11,7 @@ FIS 默认的部署插件，提供本地部署
 ```js
 fis.match('*.js', {
     deploy: fis.plugin('local-deliver', {
-        to: './output',
-        //支持对文件进行字符串替换
-        replace : {
-            from : 'http://www.online.com',
-            to : 'http://www.offline.com'
-        }
+        to: './output'
     })
 })
 ```
