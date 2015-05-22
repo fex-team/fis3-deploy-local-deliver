@@ -1,8 +1,8 @@
-# fis3-deploy-http-push
+# fis3-deploy-local-deliver
 
 ## 说明
 
-FIS 默认的部署插件，提供本地部署以及远程upload部署能力，无需手动安装就可以在 FIS 中直接使用
+FIS 默认的部署插件，提供本地部署
 
 ## 使用方法
 
@@ -10,11 +10,8 @@ FIS 默认的部署插件，提供本地部署以及远程upload部署能力，�
 
 ```js
 fis.match('*.js', {
-    deploy: fis.plugin('http-push', {
-        //如果配置了receiver，fis会把文件逐个post到接收端上
-        receiver: 'http://www.example.com:8080/receiver.php',
-        //这个参数会跟随post请求一起发送
-        to: '/home/fis/www',
+    deploy: fis.plugin('local-deliver', {
+        to: './output',
         //支持对文件进行字符串替换
         replace : {
             from : 'http://www.online.com',
