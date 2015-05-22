@@ -1,5 +1,5 @@
 {
-  "name": "fis3-deploy-http-push",
+  "name": "fis3-deploy-local-deliver",
   "version": "1.0.0",
   "description": "fis3 deploy http-push plugin",
   "main": "index.js",
