@@ -63,7 +63,9 @@ function deliver(output, release, content, file) {
 
 module.exports = function(options, modified, total, next) {
   var to = normalizePath(options.to || options.dest || 'preview', fis.project.getProjectPath());
-
+  // 产出之前先删掉目标目录
+  fis.util.del(to);
+  
   modified.forEach(function(file) {
     deliver(to, file.getHashRelease(), file.getContent(), file);
   });
