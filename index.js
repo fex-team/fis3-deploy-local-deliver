@@ -63,8 +63,9 @@ function deliver(output, release, content, file) {
 
 module.exports = function(options, modified, total, next) {
   var to = normalizePath(options.to || options.dest || 'preview', fis.project.getProjectPath());
+  var list = options.modified ? modified : total;
 
-  modified.forEach(function(file) {
+  list.forEach(function(file) {
     deliver(to, file.getHashRelease(), file.getContent(), file);
   });
 
