@@ -11,7 +11,7 @@ FIS 默认的部署插件，提供本地部署
 ```js
 fis.match('*.js', {
     deploy: fis.plugin('local-deliver', {
-        to: './output'
+        to: './output'  //值为'preview'时，部署到fis server目录
     })
 })
 ```
